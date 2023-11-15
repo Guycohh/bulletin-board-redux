@@ -50,6 +50,7 @@ const postsSlice = createSlice({
         };
       },
     },
+
     reactionAdded(state, action) {
       const { postId, reaction } = action.payload;
       const existingPost = state.posts.find((post) => post.id === postId);
@@ -77,6 +78,7 @@ const postsSlice = createSlice({
             rocket: 0,
             coffee: 0,
           };
+
           return post;
         });
 
@@ -111,12 +113,12 @@ const postsSlice = createSlice({
         action.payload.date = new Date().toISOString();
         action.payload.reactions = {
           thumbsUp: 0,
-          hooray: 0,
+          wow: 0,
           heart: 0,
           rocket: 0,
-          eyes: 0,
+          coffee: 0,
         };
-        console.log(action.payload);
+        // console.log(action.payload);
         state.posts.push(action.payload);
       });
   },
