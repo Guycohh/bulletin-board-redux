@@ -130,3 +130,7 @@ textarea {
   background-color: palevioletred;
   color: white;
 }
+
+form {
+  margin: 1rem;
+}
